@@ -39,5 +39,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, (err) => {
     return;
   }
   console.log("Connected to db!");
-  app.listen(3004, () => console.log("Server Up and running"));
+  app.listen(process.env.PORT || 3004, () =>
+    console.log("Server Up and running")
+  );
 });
